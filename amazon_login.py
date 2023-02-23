@@ -4,7 +4,7 @@ from time import sleep
 from selenium.webdriver.chrome.service import Service
 
 # driver = webdriver.Chrome(executable_path='/Users/loulouangibeau/Documents/QA-Automation/python-selenium-automation/chromedriver')
-service = Service('/Users/loulouangibeau/Documents/QA-Automation/python-selenium-automation/chromedriver')
+service = Service('/chromedriver')
 driver = webdriver.Chrome(service=service)
 
 driver.get('https://www.amazon.com/')
