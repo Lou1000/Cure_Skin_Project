@@ -2,9 +2,9 @@ from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
 
-@given("Open Amazon page")
-def open_amazon_page (context):
-    context.driver.get("https://www.amazon.com/")
+# @given("Open Amazon page")
+# def open_amazon_page (context):
+#     context.driver.get("https://www.amazon.com/")
 
 @when("Clicking on Returns and Orders tab")
 def click_returns_tab (context):

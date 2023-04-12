@@ -62,6 +62,3 @@ def checking_item_added (context, expected_result):
     # print('Test case passed')
 
     context.app.cart_page.verify_cart_item(expected_result)
-
-
-

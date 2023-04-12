@@ -3,7 +3,7 @@ Feature: Test scenario that shows item is in Amazon Cart
 
 
   Scenario: User sees the item added in the cart
-    Given Open Amazon.com website
+    Given Open Amazon page
     When search for item Hefty Party On Disposable Plastic Cups, Red, 18 Ounce, 30 Count
     When click on the search button
     When click on item
