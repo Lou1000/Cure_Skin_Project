@@ -16,11 +16,9 @@ def browser_init(context):
     context.driver.wait = WebDriverWait(context.driver,10)
     context.app = Application(driver=context.driver)
 
-
 def before_scenario(context, scenario):
     print('\nStarted scenario: ', scenario.name)
     browser_init(context)
-
 
 def before_step(context, step):
     print('\nStarted step: ', step)
