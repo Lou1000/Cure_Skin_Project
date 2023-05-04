@@ -4,6 +4,7 @@ from pages.search_results import SearchResultsPage
 from pages.cart_page import CartPage
 from pages.signin_page import SignedIn
 
+
 class Application:
 
     def __init__(self, driver):

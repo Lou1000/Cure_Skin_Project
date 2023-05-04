@@ -1,5 +1,6 @@
 from behave import given, when, then
 
+
 @given ("Open the main page")
 def open_cureskin_page (context):
      context.app.main_page.open_main_url()

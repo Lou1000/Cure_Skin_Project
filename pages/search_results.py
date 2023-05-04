@@ -3,7 +3,6 @@ from pages.base_page import Page
 from selenium.webdriver.support import expected_conditions as EC, wait
 
 
-
 class SearchResultsPage(Page):
 
     PRODUCT_TOTAL = (By.ID, "ProductCount")
