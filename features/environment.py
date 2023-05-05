@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
 from app.application import Application
 
@@ -31,6 +32,7 @@ def browser_init(context, test_name):
     context.driver.implicitly_wait(4)
     context.driver.wait = WebDriverWait(context.driver, 10)
     context.app = Application(driver=context.driver)
+
 
 
 def before_scenario(context, scenario):
