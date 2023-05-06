@@ -1,4 +1,5 @@
 from behave import given, when, then
+from selenium.webdriver.common.by import By
 
 
 @given ("Open the main page")
@@ -11,6 +12,14 @@ def open_cureskin_page (context):
 def click_shop_by_product (context):
      context.app.header.shopping_by_product()
      context.app.header.face_washes()
+
+
+@when('Click on hamburger menu')
+def click_on_hamburger(context):
+     context.app.header.hamburger()
+
+
+
 
 
 @when ("Verify {expected_result} 'Face Wash' results is shown")

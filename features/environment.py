@@ -17,17 +17,24 @@ def browser_init(context, test_name):
     # context.driver.wait = WebDriverWait(context.driver,10)
     # context.app = Application(driver=context.driver)
 
-    desired_cap = {
-        'browser': 'Chrome',
-        'os': 'Windows',
-        'os_version': '11',
-        'name': test_name
-    }
+    # desired_cap = {
+    #     'browser': 'Chrome',
+    #     'os': 'Windows',
+    #     'os_version': '11',
+    #     'name': test_name
+    # }
+    #
+    # bs_user = 'loulouangibeau_52cWXg'
+    # bs_key = 'qRkE5nyBCNq8Lvnez53n'
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    # context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
 
-    bs_user = 'loulouangibeau_52cWXg'
-    bs_key = 'qRkE5nyBCNq8Lvnez53n'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-    context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
+    mobile_emulation = {"deviceName": "iPhone 12 Pro"}
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
+    context.driver = webdriver.Chrome(executable_path='./chromedriver',
+                                      chrome_options=chrome_options)
+
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
     context.driver.wait = WebDriverWait(context.driver, 10)
